@@ -83,7 +83,6 @@ console.log(fruitProcessor(2, 3));
 const friend1 = "Michael";
 const friend2 = "Steven";
 const friend3 = "Peter";
-*/
 
 const friends = ["Micheal", "Steven", "Peter"];
 console.log(friends);
@@ -126,4 +125,34 @@ const ages = [
   calcAge(years[years.length - 1]),
 ];
 console.log(ages);
+*/
 
+// Add elements
+const friends = ["Michael", "Steven", "Peter"];
+const newLength = friends.push("Jay");
+console.log(newLength);
+console.log(friends);
+
+friends.unshift("John");
+console.log(friends);
+
+// Remove elements
+friends.pop();
+const popped = friends.pop();
+console.log(popped);
+console.log(friends);
+
+friends.shift();
+console.log(friends);
+
+console.log(friends.indexOf("Steven"));
+console.log(friends.indexOf("Bob"));
+
+friends.push(23);
+console.log(friends.includes("Steven"));
+console.log(friends.includes("Bob"));
+console.log(friends.includes(23));
+
+if (friends.includes("Steven")) {
+  console.log("You have a friend called Steven");
+}

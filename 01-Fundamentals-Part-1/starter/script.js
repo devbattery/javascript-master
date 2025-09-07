@@ -202,7 +202,6 @@ if (favourite === 23) {
 }
 
 if (favourite !== 23) console.log("Why not 23?");
-*/
 
 const hasDriversLicense = true;
 const hasGoodVision = true;
@@ -218,4 +217,17 @@ if (hasDriversLicense && hasGoodVision && !isTired) {
   console.log("Sarah is able to drive!");
 } else {
   console.log("Someone else should drive...");
+}
+*/
+
+const day = "monday";
+
+switch (day) {
+  case "monday":
+    console.log("Plan course structure");
+  case "tuesday":
+    console.log("Prepare theory videos");
+    break;
+  default:
+    console.log("Not a valid day!");
 }

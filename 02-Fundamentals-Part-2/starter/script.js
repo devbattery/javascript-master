@@ -254,7 +254,6 @@ console.log(jonas.getSummary());
 for (let rep = 1; rep < 31; rep++) {
   console.log(`Lifting weights repetition ${rep} 🏋🏻`);
 }
-*/
 
 const jonas = [
   "Jonas",
@@ -292,4 +291,27 @@ for (let i = 0; i < jonas.length; i++) {
 for (let i = 0; i < jonas.length; i++) {
   if (typeof jonas[i] === "number") break;
   console.log(jonas[i], typeof jonas[i]);
+}
+*/
+
+const jonas = [
+  "Jonas",
+  "Schmedtmann",
+  2037 - 1991,
+  "teacher",
+  ["Michael", "Peter", "Steven"],
+];
+
+// 0, 1, ..., 4
+// 4, 3, ..., 0
+for (let i = jonas.length - 1; i >= 0; i--) {
+  console.log(i, jonas[i]);
+}
+
+for (let excercise = 1; excercise < 4; excercise++) {
+  console.log(`------ Starting Exercise ${excercise}`);
+
+  for (let rep = 1; rep < 6; rep++) {
+    console.log(`Exercise ${excercise}: Lifting weight repetition ${rep} 🏋🏻`);
+  }
 }

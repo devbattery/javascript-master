@@ -69,6 +69,27 @@ const restaurant = {
   },
 };
 
+const airline = 'TAP Air Portugal';
+const lowerAir = airline.toLowerCase();
+const upperAir = airline.toUpperCase();
+console.log(lowerAir);
+console.log(upperAir);
+
+const priceGB = '288.97AA';
+const priceUS = priceGB.replaceAll('A', '$').replace('.', ',');
+console.log(priceUS);
+
+const plane = 'Airbus A320neo';
+console.log(plane.includes('A320'));
+console.log(plane.includes('Boeing'));
+console.log(plane.includes('Airb'));
+
+if (plane.startsWith('Airbus') && plane.endsWith('neo'))
+  console.log('Part of the NEW Airbus family');
+
+
+/*
+
 const airline = 'TAP air Portugal';
 const plane = 'A320';
 
@@ -97,7 +118,6 @@ console.log(typeof new String('jonas'));
 
 console.log(new String('jonas').slice(1));
 
-/*
 const question = new Map([
   ['question', 'What is the best programming language in the world?'],
   [(1, 'C')],

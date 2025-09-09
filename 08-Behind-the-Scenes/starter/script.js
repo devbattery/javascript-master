@@ -68,7 +68,6 @@ matilda.calcAge();
 
 const f = jonas.calcAge;
 f();
-*/
 
 var firstName = 'Matilda';
 
@@ -112,4 +111,49 @@ var addArrow = (a, b) => {
   return a + b;
 };
 addArrow(2, 5, 8);
+*/
 
+const jessica1 = {
+  firstName: 'Jessica',
+  lastName: 'Williams',
+  age: 27,
+};
+
+function marryPerson(originalPerson, newLastName) {
+  originalPerson.lastName = newLastName;
+  return originalPerson;
+}
+
+const marriedJesscia = marryPerson(jessica1, 'Davis');
+
+// const marriedJesscia = jessica;
+// marriedJesscia.lastName = 'Davis';
+
+console.log('Before', jessica1);
+console.log('After', marriedJesscia);
+
+const jessica2 = {
+  firstName: 'Jessica',
+  lastName: 'Williams',
+  age: 27,
+  family: ['Alice', 'Bob'],
+};
+
+// Shallow copy
+const jessica2Copy = { ...jessica2 };
+
+jessica2Copy.lastName = 'Davis';
+
+// jessica2Copy.family.push('Mary');
+// jessica2Copy.family.push('John');
+
+// console.log('Before', jessica2);
+// console.log('After', jessica2Copy);
+
+// Deep copy
+const jessica2Clone = structuredClone(jessica2);
+jessica2Clone.family.push('Mary');
+jessica2Clone.family.push('John');
+
+console.log('Original: ', jessica2);
+console.log('Clone: ', jessica2Clone);

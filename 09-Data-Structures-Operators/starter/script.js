@@ -69,6 +69,35 @@ const restaurant = {
   },
 };
 
+const airline = 'TAP air Portugal';
+const plane = 'A320';
+
+console.log(plane[0]);
+console.log(plane[1]);
+console.log(plane[2]);
+console.log('B737'[0]);
+
+console.log(airline.length);
+console.log('B737'.length);
+
+console.log(airline.indexOf('r'));
+console.log(airline.lastIndexOf('r'));
+console.log(airline.indexOf('Portugal'));
+
+console.log(airline.slice(4));
+console.log(airline.slice(4, 7));
+
+console.log(airline.slice(-2));
+console.log(airline.slice(1, -1));
+
+console.log(airline.slice(-1));
+
+console.log(new String('jonas'));
+console.log(typeof new String('jonas'));
+
+console.log(new String('jonas').slice(1));
+
+/*
 const question = new Map([
   ['question', 'What is the best programming language in the world?'],
   [(1, 'C')],
@@ -101,7 +130,6 @@ console.log([...question]);
 console.log(...question.keys());
 console.log(...question.values());
 
-/*
 const rest = new Map();
 rest.set('name', 'Classico Italiano');
 rest.set(1, 'Firenze, Italy');

@@ -69,6 +69,19 @@ const restaurant = {
   },
 };
 
+console.log('a+very+nice+string'.split('+'));
+
+const newName = ['Mr.', 'haha'.toUpperCase()].join('-');
+console.log(newName);
+
+const message = 'Go to gate 23!';
+console.log(message.padStart(25, '+').padEnd(30, '='));
+
+console.log('hahahahaha'.repeat(10));
+
+
+/*
+
 const airline = 'TAP Air Portugal';
 const lowerAir = airline.toLowerCase();
 const upperAir = airline.toUpperCase();
@@ -86,9 +99,6 @@ console.log(plane.includes('Airb'));
 
 if (plane.startsWith('Airbus') && plane.endsWith('neo'))
   console.log('Part of the NEW Airbus family');
-
-
-/*
 
 const airline = 'TAP air Portugal';
 const plane = 'A320';

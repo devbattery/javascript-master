@@ -183,6 +183,23 @@ btnTransfer.addEventListener('click', (e) => {
   }
 });
 
+btnLoan.addEventListener('click', (e) => {
+  e.preventDefault();
+  const amount = Number(inputLoanAmount.value);
+  if (
+    amount > 0 &&
+    currentAccount.movements.some((mov) => mov >= amount * 0.1)
+  ) {
+    // Add movement
+    currentAccount.movements.push(amount);
+
+    // Update UI
+    updateUI(currentAccount);
+  }
+
+  inputLoanAmount.value = '';
+});
+
 btnClose.addEventListener('click', (e) => {
   e.preventDefault();
   if (
@@ -285,7 +302,6 @@ console.log(firstWithdrawal);
 console.log(accounts);
 const account = accounts.find((acc) => acc.owner === 'Jessica Davis');
 console.log(account);
-*/
 
 console.log(movements);
 const lastWithdrawal = movements.findLast((mov) => mov < 0);
@@ -300,3 +316,23 @@ console.log(
     movements.length - lastestLargeMovementIndex
   } movements ago`
 );
+*/
+
+console.log(movements);
+
+// EQUALITY
+console.log(movements.includes(-130));
+
+// SOME: CONDITION
+const anyDeposits = movements.some((mov) => mov > 5000);
+console.log(anyDeposits);
+
+// EVERY
+console.log(movements.every((mov) => mov < 5000));
+
+// Separate callback
+const deposit = (mov) => mov > 0;
+console.log(movements.some(deposit));
+console.log(movements.every(deposit));
+console.log(movements.filter(deposit));
+

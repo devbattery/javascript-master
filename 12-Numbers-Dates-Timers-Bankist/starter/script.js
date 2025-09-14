@@ -342,7 +342,6 @@ labelBalance.addEventListener('click', () => {
     if (i % 3 === 0) row.style.backgroundColor = 'blue';
   });
 });
-*/
 
 // 287,460,000,000
 const diameter = 287_460_000_000;
@@ -356,4 +355,36 @@ console.log(PI);
 
 // console.log(Number('230_000'));
 console.log(parseInt('230000'));
+*/
+
+console.log(2 ** 53 - 1);
+console.log(Number.MAX_SAFE_INTEGER);
+console.log(2 ** 53 + 1);
+console.log(2 ** 53 + 2);
+console.log(2 ** 53 + 3);
+
+console.log(42981213409839031820982109813209812390312890n);
+console.log(BigInt(42981213409839031820982109813209812390312890));
+
+console.log(10000n + 20000n);
+console.log(9823109312912331920n * 201303120n);
+// console.log(Math.sqrt(16n));
+
+const huge = 21393129312913291329312n;
+const num = 23;
+console.log(huge * BigInt(num));
+
+// Exceptions
+console.log(20n > 15);
+console.log(20n === 20);
+console.log(20n === BigInt(20));
+console.log(typeof 20n);
+console.log(20n == 20);
+console.log(20n == '20');
+
+console.log(huge + ' is REALLY big!!!');
+
+// Divisions
+console.log(10n / 3n);
+console.log(10 / 3);
 
